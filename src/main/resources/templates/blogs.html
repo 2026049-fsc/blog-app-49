@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
 </head>
-<header>
-    <h1></h1>
-</header>
+<header th:replace="~{fragments/layout :: header}"></header>
+
 <body>
     <h1>All Blogs</h1>
+    <div th:each="blog :${blogs}" class="card">
+        <div class="card-image">
+            <img src="placeholder.jpg" alt="イメージ画像">
+        </div>
+
+        <div class="card-body">
+            <h3 th:text="${blog.title}" class="card-title">カードのタイトル</h3>
+            <p th:text="${blog.content}" class="card-text">ここには記事の要約や、簡単な説明文が入ります。</p>
+            <a href="#" class="card-button">詳細を見る</a>
+        </div>
+
+    </div>
 </body>
+
 </html>

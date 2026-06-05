@@ -1,0 +1,68 @@
+.ulc {
+    display: flex;
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    gap: 20px; 
+}
+
+.navc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.ulc a {
+    text-decoration: none;
+    color: #333;
+}
+.ulc a:hover {
+    color: #007bff; 
+}
+
+/* 1. カード全体の器のスタイル */
+.card {
+    width: 300px;                 /* カードの横幅 */
+    background-color: #ffffff;    /* カードの背景色（白） */
+    border-radius: 8px;           /* 四隅を丸くする（重要！） */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 柔らかな影をつける（立体感を出す） */
+    overflow: hidden;             /* 子要素（画像など）が角丸からはみ出るのを防ぐ */
+    font-family: sans-serif;
+}
+
+/* 2. 画像の調整 */
+.card-image img {
+    width: 100%;                  /* 常にカードの横幅いっぱいに広げる */
+    height: 200px;                /* 画像の高さを固定 */
+    object-fit: cover;            /* 画像の比率を保ったまま枠内に収める（歪み防止） */
+}
+
+/* 3. テキストエリアの余白設定 */
+.card-body {
+    padding: 20px;                /* 内側に適度な余白を作る（重要！） */
+}
+
+/* 4. タイトルと本文の微調整 */
+.card-title {
+    margin: 0 0 10px 0;           /* 下側にだけ隙間をあける */
+    font-size: 18px;
+}
+
+.card-text {
+    margin: 0 0 15px 0;
+    color: #666;                  /* 文字色を少し薄くして見やすく */
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 5. ボタンのスタイル */
+.card-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}

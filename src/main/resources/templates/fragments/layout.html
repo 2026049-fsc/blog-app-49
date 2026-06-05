@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Fragment</title>
+</head>
+<body>
+    <header th:fragment="header">
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+        
+        <div class="navc">
+            <h1>Bolog App</h1>
+            <nav>
+                <ul class="ulc">
+                    <li><a th:href="@{/}">ブログ一覧</a></li>
+                    <li><a th:href="@{/signup}">投稿</a></li>
+                    <li><a th:href="@{/login}">ログイン</a></li>
+                    <li><a th:href="@{/signup}">サインアップ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+</body>
+</html>
