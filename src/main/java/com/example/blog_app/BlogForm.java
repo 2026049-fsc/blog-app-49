@@ -1,19 +1,8 @@
 package com.example.blog_app;
 
-import java.time.LocalDateTime;
-//dataclass
-public class Blog {
-
+public class BlogForm {
     private String title;
     private String content;
-
-    //コンストラクター
-    public Blog(String title,String content){
-        this.title = title;
-        this.content = content;
-  
-    }
-   
     public String getTitle() {
         return title;
     }
@@ -26,5 +15,5 @@ public class Blog {
     public void setContent(String content) {
         this.content = content;
     }
-    
+
 }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header th:replace="~{fragments/layout :: header}"></header>
+
+<body>
+    <div>
+        <form action="/blogs" method="post">
+            <input type="text" name="title">
+            <input type="text" name="content">
+            <button>保存</button>
+        </form>
+    </div>
+    <a href="/">キャンセル</a>
+</body>
+
+</html>
