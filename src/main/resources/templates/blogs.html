@@ -18,7 +18,7 @@
         <div class="card-body">
             <h3 th:text="${blog.title}" class="card-title">カードのタイトル</h3>
             <p th:text="${blog.content}" class="card-text">ここには記事の要約や、簡単な説明文が入ります。</p>
-            <a href="#" class="card-button">詳細を見る</a>
+            <a th:href="@{/blogs/{id}(id=${blog.id})}" class="card-button">詳細を見る</a>
         </div>
 
     </div>

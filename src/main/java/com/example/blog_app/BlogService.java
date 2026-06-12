@@ -1,6 +1,7 @@
 package com.example.blog_app;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,11 @@ public class BlogService {
         if (form.getTitle() == null || form.getTitle().isBlank()) {
             throw new IllegalArgumentException();
         }
-        Blog blog = new Blog(form.getTitle(), form.getContent());
+        Blog blog = new Blog(null, form.getTitle(), form.getContent());
         blogRepository.save(blog);
+    }
+
+    public Optional<Blog> findById(Long id) {
+        return blogRepository.findById(id);
     }
 }
